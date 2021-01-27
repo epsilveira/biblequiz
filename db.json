@@ -4,26 +4,148 @@
     "description": "Teste os seus conhecimentos sobre a Bíblia!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Como eram chamados aqueles que não eram judeus, no tempo de Paulo?",
+        "description": "",
+        "answer": 3,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Gentes",
+          "Gentis",
+          "Gentios",
+          "Gentalhas"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Na armadura de Deus (Ef 6), qual parte da armadura representa a salvação?",
+        "description": "",
+        "answer": 2,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Couraça",
+          "Capacete",
+          "Escudo",
+          "Sandálias"
         ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Por quem Paulo faz um apelo na carta endereçada a Filemon?",
+        "description": "",
+        "answer": 4,
+        "alternatives": [
+          "Demas",
+          "Timóteo",
+          "Arquipo",
+          "Onésimo"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o nome do filho do casamento de Abraão com Sara?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "José",
+          "Ismael",
+          "Isaque",
+          "Jacó"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "O que significa a sigla NTLH, correspondente à uma tradução bíblica?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Nova Tradução na Linguagem de Hoje",
+          "Nova Tradução na Linguagem do Homem",
+          "Nova Tradução na Liturgia de Hoje",
+          "Nova Tradução Linda e Honesta"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quais os nomes das esposas de Jacó?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Raquel e Bila",
+          "Raquel e Lia",
+          "Bila e Lia",
+          "Bila e Rute"
+        ]
+      },
+      {  
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Em que livro da Bíblia os 10 mandamentos são repetidos e reiterados?",
+        "description": "",
+        "answer": 4,
+        "alternatives": [
+          "Êxodo",
+          "Levítico",
+          "Números",
+          "Deuteronômio"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o primeiro herói da fé citado em Hebreus 11?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Adão",
+          "Abel",
+          "Noé",
+          "Abraão"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quem é o autor do livro Atos dos Apóstolos?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Mateus",
+          "Paulo",
+          "Lucas",
+          "João"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o nome do rio onde Moisés foi colocado em um cesto?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Rio Juncos",
+          "Mar de Juncos",
+          "Rio Nilo",
+          "Rio Eufrates"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quem é o “discípulo a quem Jesus amava”?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Pedro",
+          "João",
+          "Tiago",
+          "Judas"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Em qual cidade Jesus nasceu?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Nazaré",
+          "Belém da Judéia",
+          "Jerusalém",
+          "Samaria"
+          ]
       }
     ],
     "external": [
