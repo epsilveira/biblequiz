@@ -2,11 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import db from '../db.json';
+import Button from '../src/components/Button';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
 import QuizContainer from '../src/components/QuizContainer';
+import QuizLogo from '../src/components/QuizLogo';
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -28,6 +31,7 @@ export default function Home() {
         <link rel="icon" type="image/png" href={db.icon} />
       </Head>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Quiz Da Bíblia</h1>
@@ -38,16 +42,15 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
-                onChange={function (event) {
-                  setName(event.target.value);
-                }}
+              <Input
+                name="nomeDoUsuario"
+                onChange={(event) => setName(event.target.value)}
                 placeholder="Diz ai seu nome"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {/* {name} */}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Vamos jogar ${name}!`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
