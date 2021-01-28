@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import AlternativesForm from '../src/components/AlternativesForm';
 import Widget from '../src/components/Widget';
@@ -9,38 +10,59 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
 
-function ResultWidget({ results }) {
+function ResultWidget({ results, totalQuestions }) {
+  const totalCorrect = results.filter((x) => x).length;
+  const router = useRouter();
+  const { name } = router.query;
+
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado...
+        <h1>
+          Resultado de
+          {' '}
+          {name}
+        </h1>
       </Widget.Header>
 
       <Widget.Content>
-        <p>
-          Você acertou
-          {' '}
-          {/* {results.reduce((actualSum, actualResult) => {
+        {totalCorrect >= totalQuestions ? (
+          <>
+            <h3>Parabéns! Você acertou todas as questões!</h3>
+            <p>
+              Continue estudando a Palavra de Deus para crescer e ser cada vez mais
+              {' '}
+              <strong>Semelhante a Cristo!</strong>
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Você acertou
+              {' '}
+              {/* {results.reduce((actualSum, actualResult) => {
             if (actualResult === true) {
               return actualSum + 1;
             }
             return actualSum;
           }, 0)} */}
-          {results.filter((x) => x).length}
-          {' '}
-          perguntas
-        </p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              Resultado questão #
-              {index + 1}
-              :
-              {' '}
-              {result === true ? 'Acertou' : 'Errou'}
-            </li>
-          ))}
-        </ul>
+              {((totalCorrect / totalQuestions) * 100).toFixed(0)}
+              % das questões
+            </p>
+            <ul>
+              {results.map((result, index) => (
+                <li key={`result__${result}`}>
+                  Questão #
+                  {index + 1}
+                  :
+                  {' '}
+                  {result === true ? '✅' : '❌'}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
       </Widget.Content>
     </Widget>
   );
@@ -161,8 +183,8 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          {/* {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>} */}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
@@ -226,7 +248,9 @@ export default function QuizPage() {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && (
+        <ResultWidget results={results} totalQuestions={totalQuestions} />
+        )}
       </QuizContainer>
     </QuizBackground>
   );

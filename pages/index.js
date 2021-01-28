@@ -21,6 +21,7 @@ import QuizLogo from '../src/components/QuizLogo';
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
