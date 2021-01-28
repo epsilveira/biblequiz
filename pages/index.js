@@ -37,6 +37,7 @@ export default function Home() {
             <h1>Quiz Da Bíblia</h1>
           </Widget.Header>
           <Widget.Content>
+            <p>Teste seus conhecimentos da Bíblia!</p>
             <form onSubmit={function (event) {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
@@ -45,11 +46,11 @@ export default function Home() {
               <Input
                 name="nomeDoUsuario"
                 onChange={(event) => setName(event.target.value)}
-                placeholder="Diz ai seu nome"
+                placeholder="Seu nome"
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Vamos jogar ${name}!`}
+                Vamos jogar!
               </Button>
             </form>
           </Widget.Content>
