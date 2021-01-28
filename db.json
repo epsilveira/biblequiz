@@ -38,11 +38,120 @@
           "Arquipo",
           "Onésimo"
         ]
-      
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o nome do filho do casamento de Abraão com Sara?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "José",
+          "Ismael",
+          "Isaque",
+          "Jacó"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "O que significa a sigla NTLH, correspondente à uma tradução bíblica?",
+        "description": "",
+        "answer": 0,
+        "alternatives": [
+          "Nova Tradução na Linguagem de Hoje",
+          "Nova Tradução na Linguagem do Homem",
+          "Nova Tradução na Liturgia de Hoje",
+          "Nova Tradução Linda e Honesta"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quais os nomes das esposas de Jacó?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Raquel e Bila",
+          "Raquel e Lia",
+          "Bila e Lia",
+          "Bila e Rute"
+        ]
+      },
+      {  
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Em que livro da Bíblia os 10 mandamentos são repetidos e reiterados?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Êxodo",
+          "Levítico",
+          "Números",
+          "Deuteronômio"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o primeiro herói da fé citado em Hebreus 11?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Adão",
+          "Abel",
+          "Noé",
+          "Abraão"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quem é o autor do livro Atos dos Apóstolos?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Mateus",
+          "Paulo",
+          "Lucas",
+          "João"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Qual o nome do rio onde Moisés foi colocado em um cesto?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Rio Juncos",
+          "Mar de Juncos",
+          "Rio Nilo",
+          "Rio Eufrates"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Quem é o “discípulo a quem Jesus amava”?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Pedro",
+          "João",
+          "Tiago",
+          "Judas"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/aAfKYv1ScWDuM/giphy.gif",
+        "title": "Em qual cidade Jesus nasceu?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Nazaré",
+          "Belém da Judéia",
+          "Jerusalém",
+          "Samaria"
+          ]
       }
     ],
     "external": [
-      "https://aluraquiz-css.omariosouto.vercel.app/"
+      "https://aluraquiz-css.omariosouto.vercel.app/",
+      "https://aluraquiz-coffee.leonardot07.vercel.app/",
+      "https://dnd-quiz.andrei-ce.vercel.app/"
     ],
     "theme": {
       "colors": {

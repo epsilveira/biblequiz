@@ -12,6 +12,7 @@ import Button from '../src/components/Button';
 
 function ResultWidget({ results, totalQuestions }) {
   const totalCorrect = results.filter((x) => x).length;
+  const correctPercentage = ((totalCorrect / totalQuestions) * 100).toFixed(0);
   const router = useRouter();
   const { name } = router.query;
 
@@ -26,7 +27,7 @@ function ResultWidget({ results, totalQuestions }) {
       </Widget.Header>
 
       <Widget.Content>
-        {totalCorrect >= totalQuestions ? (
+        {totalCorrect >= totalQuestions && (
           <>
             <h3>Parabéns! Você acertou todas as questões!</h3>
             <p>
@@ -35,7 +36,35 @@ function ResultWidget({ results, totalQuestions }) {
               <strong>Semelhante a Cristo!</strong>
             </p>
           </>
-        ) : (
+        )}
+        {correctPercentage >= 75 && correctPercentage < 100 && (
+          <>
+            <p>
+              Parabéns! Você acertou
+              {' '}
+              {/* {results.reduce((actualSum, actualResult) => {
+            if (actualResult === true) {
+              return actualSum + 1;
+            }
+            return actualSum;
+          }, 0)} */}
+              {correctPercentage}
+              % das questões, faltou pouco!
+            </p>
+            <ul>
+              {results.map((result, index) => (
+                <li key={`result__${result}`}>
+                  Questão #
+                  {index + 1}
+                  :
+                  {' '}
+                  {result === true ? '✅' : '❌'}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {correctPercentage >= 40 && correctPercentage < 75 && (
           <>
             <p>
               Você acertou
@@ -46,8 +75,37 @@ function ResultWidget({ results, totalQuestions }) {
             }
             return actualSum;
           }, 0)} */}
-              {((totalCorrect / totalQuestions) * 100).toFixed(0)}
-              % das questões
+              {correctPercentage}
+              % das questões. Tente novamente, dessa vez você consegue =D
+            </p>
+            <ul>
+              {results.map((result, index) => (
+                <li key={`result__${result}`}>
+                  Questão #
+                  {index + 1}
+                  :
+                  {' '}
+                  {result === true ? '✅' : '❌'}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {correctPercentage < 40 && (
+          <>
+            <p>
+              Você acertou
+              {' '}
+              {/* {results.reduce((actualSum, actualResult) => {
+            if (actualResult === true) {
+              return actualSum + 1;
+            }
+            return actualSum;
+          }, 0)} */}
+              {correctPercentage}
+              % das questões. Mas não fique triste,
+              {' '}
+              você pode tentar novamente e continuar aprendendo.
             </p>
             <ul>
               {results.map((result, index) => (
@@ -148,7 +206,7 @@ function QuestionWidget({
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 2 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
