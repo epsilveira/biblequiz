@@ -2,13 +2,16 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
 import { useRouter } from 'next/router';
-import db from '../db.json';
-import AlternativesForm from '../src/components/AlternativesForm';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
+import { motion } from 'framer-motion';
+
+import db from '../../db.json';
+import AlternativesForm from '../../src/components/AlternativesForm';
+import Widget from '../../src/components/Widget';
+import QuizLogo from '../../src/components/QuizLogo';
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizContainer from '../../src/components/QuizContainer';
+import Button from '../../src/components/Button';
+import BackLinkArrow from '../../src/components/BackLinkArrow';
 
 function ResultWidget({ results, totalQuestions }) {
   const totalCorrect = results.filter((x) => x).length;
@@ -19,6 +22,7 @@ function ResultWidget({ results, totalQuestions }) {
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h1>
           Resultado de
           {' '}
@@ -175,7 +179,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -238,7 +242,13 @@ function QuestionWidget({
           {JSON.stringify(question, null, 4)}
         </pre> */}
 
-          <Button type="submit" disabled={!hasAlternativeSelected}>
+          <Button
+            type="submit"
+            disabled={!hasAlternativeSelected}
+            as={motion.button}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Confirmar
           </Button>
           {/* {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
