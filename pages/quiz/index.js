@@ -317,7 +317,7 @@ export default function QuizPage() {
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
         {screenState === screenStates.RESULT && (
-        <ResultWidget results={results} totalQuestions={totalQuestions} />
+          <ResultWidget results={results} totalQuestions={totalQuestions} />
         )}
       </QuizContainer>
     </QuizBackground>

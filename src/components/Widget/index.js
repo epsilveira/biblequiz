@@ -74,4 +74,8 @@ Widget.Topic = styled.a`
   }
 `;
 
+Widget.TopicDisabled = styled(Widget.Topic)`
+  cursor: no-drop;  
+`;
+
 export default Widget;

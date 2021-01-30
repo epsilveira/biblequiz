@@ -96,14 +96,19 @@ export default function Home() {
                   .split('.');
                 return (
                   <li>
-                    <Widget.Topic
-                      as={Link}
-                      href={`/quiz/${projectName}___${gitHubUser}?name=${name}`}
-                      // target="_blank"
-                      // rel="noreferrer"
-                    >
-                      {`${projectName}/${gitHubUser}`}
-                    </Widget.Topic>
+                    {name.length === 0 ? (
+                      <Widget.TopicDisabled>
+                        {`${projectName}/${gitHubUser}`}
+                      </Widget.TopicDisabled>
+
+                    ) : (
+                      <Widget.Topic
+                        as={Link}
+                        href={`/quiz/${projectName}___${gitHubUser}?name=${name}`}
+                      >
+                        {`${projectName}/${gitHubUser}`}
+                      </Widget.Topic>
+                    )}
                   </li>
                 );
               })}
